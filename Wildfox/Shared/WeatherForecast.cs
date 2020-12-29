@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace Shared
+namespace Wildfox.Shared
 {
     public class WeatherForecast
     {
