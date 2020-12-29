@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.30404.54
+VisualStudioVersion = 16.0.30803.129
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wildfox.Server", "Server\Wildfox.Server.csproj", "{617FE83D-9849-4734-9B11-0E82CFCB30C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{5CDE71E0-2F17-437A-A7E9-B335DBDD5214}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BBBB7925-89C4-4EC1-9DFE-176392807674} = {BBBB7925-89C4-4EC1-9DFE-176392807674}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wildfox.Client", "Client\Wildfox.Client.csproj", "{3DE4F911-EED0-46C8-8E86-5479C367E34C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorClient", "BlazorClient\BlazorClient.csproj", "{BBBB7925-89C4-4EC1-9DFE-176392807674}"
+	ProjectSection(ProjectDependencies) = postProject
+		{41FFDE49-2BB7-4692-B7FC-9DEEE513A73C} = {41FFDE49-2BB7-4692-B7FC-9DEEE513A73C}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wildfox.Shared", "Shared\Wildfox.Shared.csproj", "{505DAEF5-D499-4FAB-9B8D-017280DA1F06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{41FFDE49-2BB7-4692-B7FC-9DEEE513A73C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,23 +21,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{617FE83D-9849-4734-9B11-0E82CFCB30C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{617FE83D-9849-4734-9B11-0E82CFCB30C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{617FE83D-9849-4734-9B11-0E82CFCB30C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{617FE83D-9849-4734-9B11-0E82CFCB30C7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3DE4F911-EED0-46C8-8E86-5479C367E34C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3DE4F911-EED0-46C8-8E86-5479C367E34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3DE4F911-EED0-46C8-8E86-5479C367E34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3DE4F911-EED0-46C8-8E86-5479C367E34C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{505DAEF5-D499-4FAB-9B8D-017280DA1F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{505DAEF5-D499-4FAB-9B8D-017280DA1F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{505DAEF5-D499-4FAB-9B8D-017280DA1F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{505DAEF5-D499-4FAB-9B8D-017280DA1F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CDE71E0-2F17-437A-A7E9-B335DBDD5214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CDE71E0-2F17-437A-A7E9-B335DBDD5214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CDE71E0-2F17-437A-A7E9-B335DBDD5214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CDE71E0-2F17-437A-A7E9-B335DBDD5214}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBBB7925-89C4-4EC1-9DFE-176392807674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBBB7925-89C4-4EC1-9DFE-176392807674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBBB7925-89C4-4EC1-9DFE-176392807674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBBB7925-89C4-4EC1-9DFE-176392807674}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41FFDE49-2BB7-4692-B7FC-9DEEE513A73C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41FFDE49-2BB7-4692-B7FC-9DEEE513A73C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41FFDE49-2BB7-4692-B7FC-9DEEE513A73C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41FFDE49-2BB7-4692-B7FC-9DEEE513A73C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {481AD45B-D0F9-4133-98A2-FBF62DFD747C}
+		SolutionGuid = {FE8C964C-C002-46E0-A4A5-60C73B669C5F}
 	EndGlobalSection
 EndGlobal

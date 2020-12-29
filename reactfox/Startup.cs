@@ -1,10 +1,14 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using reactfox.Interface;
+using reactfox.Interfaces;
 
-namespace Server
+namespace reactfox
 {
     public class Startup
     {
@@ -16,12 +20,17 @@ namespace Server
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
 
             services.AddControllersWithViews();
-            services.AddRazorPages();
+            services.AddHttpClient<IExchangeRatesService, ExchangeRatesService>();
+
+            // In production, the React files will be served from this directory
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "ClientApp/build";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -30,7 +39,6 @@ namespace Server
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseWebAssemblyDebugging();
             }
             else
             {
@@ -40,16 +48,26 @@ namespace Server
             }
 
             app.UseHttpsRedirection();
-            app.UseBlazorFrameworkFiles();
             app.UseStaticFiles();
+            app.UseSpaStaticFiles();
 
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
-                endpoints.MapControllers();
-                endpoints.MapFallbackToFile("index.html");
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller}/{action=Index}/{id?}");
+            });
+
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "ClientApp";
+
+                if (env.IsDevelopment())
+                {
+                    spa.UseReactDevelopmentServer(npmScript: "start");
+                }
             });
         }
     }

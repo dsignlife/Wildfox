@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Shared;
+using System.Threading.Tasks;
 
-namespace Server.Controllers
+namespace reactfox.Controllers
 {
     [ApiController]
     [Route("[controller]")]
