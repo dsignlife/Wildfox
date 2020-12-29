@@ -10,7 +10,7 @@ using reactfox.Models;
 namespace reactfox.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class ExchangeRatesServiceController : ControllerBase
     {
         private readonly IExchangeRatesService _exchangeRatesService;
