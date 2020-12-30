@@ -1,8 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Server.Interface;
+using Server.Interfaces;
 
 namespace Server
 {
@@ -21,7 +25,16 @@ namespace Server
         {
 
             services.AddControllersWithViews();
-            services.AddRazorPages();
+            services.AddHttpClient<IExchangeRatesService, ExchangeRatesService>();
+
+            //services.AddRazorPages();
+
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "../ReactClient/build";
+            });
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,15 +55,37 @@ namespace Server
             app.UseHttpsRedirection();
             app.UseBlazorFrameworkFiles();
             app.UseStaticFiles();
+            app.UseSpaStaticFiles();
 
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
-                endpoints.MapControllers();
-                endpoints.MapFallbackToFile("index.html");
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller}/{action=Index}/{id?}");
+            });
+
+            //Razorclient
+
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapRazorPages();
+            //    endpoints.MapControllers();
+            //    endpoints.MapFallbackToFile("index.html");
+            //});
+
+            //
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "../ReactClient";
+
+                if (env.IsDevelopment())
+                {
+                    spa.UseReactDevelopmentServer(npmScript: "start");
+                }
             });
         }
     }
 }
+

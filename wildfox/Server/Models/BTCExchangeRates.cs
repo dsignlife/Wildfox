@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace reactfox.Models
+namespace Server.Models
 {
     public class BTCExchangeRates
     {

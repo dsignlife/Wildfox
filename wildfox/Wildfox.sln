@@ -15,24 +15,38 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorClient", "BlazorClien
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{41FFDE49-2BB7-4692-B7FC-9DEEE513A73C}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "ReactClient", "ReactClient\ReactClient.njsproj", "{26DC5976-8409-46E3-B50A-2153892C6F9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		React|Any CPU = React|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{5CDE71E0-2F17-437A-A7E9-B335DBDD5214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5CDE71E0-2F17-437A-A7E9-B335DBDD5214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CDE71E0-2F17-437A-A7E9-B335DBDD5214}.React|Any CPU.ActiveCfg = React|Any CPU
+		{5CDE71E0-2F17-437A-A7E9-B335DBDD5214}.React|Any CPU.Build.0 = React|Any CPU
 		{5CDE71E0-2F17-437A-A7E9-B335DBDD5214}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CDE71E0-2F17-437A-A7E9-B335DBDD5214}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BBBB7925-89C4-4EC1-9DFE-176392807674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BBBB7925-89C4-4EC1-9DFE-176392807674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBBB7925-89C4-4EC1-9DFE-176392807674}.React|Any CPU.ActiveCfg = Debug|Any CPU
 		{BBBB7925-89C4-4EC1-9DFE-176392807674}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBBB7925-89C4-4EC1-9DFE-176392807674}.Release|Any CPU.Build.0 = Release|Any CPU
 		{41FFDE49-2BB7-4692-B7FC-9DEEE513A73C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{41FFDE49-2BB7-4692-B7FC-9DEEE513A73C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41FFDE49-2BB7-4692-B7FC-9DEEE513A73C}.React|Any CPU.ActiveCfg = React|Any CPU
+		{41FFDE49-2BB7-4692-B7FC-9DEEE513A73C}.React|Any CPU.Build.0 = React|Any CPU
 		{41FFDE49-2BB7-4692-B7FC-9DEEE513A73C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41FFDE49-2BB7-4692-B7FC-9DEEE513A73C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26DC5976-8409-46E3-B50A-2153892C6F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26DC5976-8409-46E3-B50A-2153892C6F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26DC5976-8409-46E3-B50A-2153892C6F9A}.React|Any CPU.ActiveCfg = Release|Any CPU
+		{26DC5976-8409-46E3-B50A-2153892C6F9A}.React|Any CPU.Build.0 = Release|Any CPU
+		{26DC5976-8409-46E3-B50A-2153892C6F9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26DC5976-8409-46E3-B50A-2153892C6F9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

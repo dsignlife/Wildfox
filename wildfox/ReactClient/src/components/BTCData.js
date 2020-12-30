@@ -15,7 +15,7 @@ export class BTCData extends Component {
     static renderForecastsTable(currencies) {
         return (
             <div>
-                USD {currencies.usd.symbol}: {currencies.usd.last} {currencies.usd.buy} {currencies.usd.sell} 
+                USD{currencies.usd.symbol}: {currencies.usd.last} {currencies.usd.buy} {currencies.usd.sell} 
             </div>
 
 

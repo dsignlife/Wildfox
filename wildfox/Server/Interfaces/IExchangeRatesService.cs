@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using reactfox.Models;
+using Server.Models;
 
-namespace reactfox.Interfaces
+namespace Server.Interfaces
 {
 
     public interface IExchangeRatesService

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
-using reactfox.Interfaces;
-using reactfox.Models;
+using Server.Interfaces;
+using Server.Models;
 
-namespace reactfox.Interface
+namespace Server.Interface
 {
     public class ExchangeRatesService : IExchangeRatesService
     {
