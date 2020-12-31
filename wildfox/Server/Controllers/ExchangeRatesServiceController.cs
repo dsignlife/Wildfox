@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Server.Interfaces;
-using Server.Models;
+using Shared.Models;
 
 namespace Server.Controllers
 {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace Server.Models
+namespace Shared.Models
 {
     public class BTCExchangeRates
     {

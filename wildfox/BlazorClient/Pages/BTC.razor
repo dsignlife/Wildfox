@@ -1,0 +1,30 @@
+﻿@page "/btc"
+@using global::Shared.Models
+@inject HttpClient Http
+
+<h3>BTC</h3>
+
+@if (CurrencyList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <h4>USD @CurrencyList.USD.Symbol</h4>
+    @CurrencyList.USD.Last
+    @CurrencyList.USD.Buy
+    @CurrencyList.USD.Sell
+
+}
+
+
+@code {
+    private Currencies CurrencyList;
+
+    protected override async Task OnInitializedAsync()
+    {
+        CurrencyList = await Http.GetFromJsonAsync<Currencies>("ExchangeRatesService");
+    }
+
+}
+

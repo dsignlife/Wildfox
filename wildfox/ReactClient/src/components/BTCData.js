@@ -12,7 +12,7 @@ export class BTCData extends Component {
         this.populateBTCData();
     }
 
-    static renderForecastsTable(currencies) {
+    static renderPage(currencies) {
         return (
             <div>
                 USD{currencies.usd.symbol}: {currencies.usd.last} {currencies.usd.buy} {currencies.usd.sell} 
@@ -25,7 +25,7 @@ export class BTCData extends Component {
     render() {
         let contents = this.state.loading
             ? <p><em>Loading...</em></p>
-            : BTCData.renderForecastsTable(this.state.currencies);
+            : BTCData.renderPage(this.state.currencies);
 
         return (
             <div>

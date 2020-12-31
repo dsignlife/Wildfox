@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Server.Interfaces;
-using Server.Models;
+using Shared.Models;
 
 namespace Server.Interface
 {
